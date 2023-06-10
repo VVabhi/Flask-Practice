@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Titles</title>
+    <style>
+        .container {
+           align-items: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            width: 350px;
+            align-items: center;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #dddddd;
+        }
+
+    </style>
+</head>
+<body>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Movie Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in data.iterrows() %}
+            <tr>
+                <td>{{ (page-1)*10+index+1 }}</td>
+                <td>{{ row[0] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if page>1 %}
+    <a href="?page={{page-1}}">previous</a>
+    {% endif %}
+    <a href="?page={{page+1}}">Next</a>
+</body>
+</html>

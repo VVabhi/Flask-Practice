@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <input type="checkbox" id="select-all">
+            </thead>
+            <tbody>
+                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const selectAllCheckbox = document.getElementById('select-all');
+        const checkboxes = document.querySelectorAll('.checkbox');
+
+        selectAllCheckbox.addEventListener('change', (event) => {
+            const isChecked = event.target.checked;
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = isChecked;
+            }); 
+
+
+        });
+    </script>
+</body>
+</html>

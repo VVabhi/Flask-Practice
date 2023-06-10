@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Data</title>
+    <style>
+        table, th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #dddddd;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                {% for col in cols %}
+                <th>{{ col }}</th>
+                {% endfor %}              
+            </tr> 
+        </thead>
+        <tbody>
+            {% for rows in rows %}
+            <tr>
+                {% for val in rows %}
+                <td>{{ val }}</td>
+                {% endfor %} 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- <script>
+        let checkedEvents = [];
+        $('#eventsTable').find('tbody tr').each(function(index) {
+        if( $(this).find("input[type='checkbox'][id^=customSwitch]").prop('checked') ) {
+            checkedEvents.push({
+            eventName: $(this).find("td:first-child").text().trim(),
+            status: $(this).find("input[type='checkbox'][id^=customSwitch]").prop('checked'),
+            });
+        }
+        });
+    </script> -->
+</body>
+</html>

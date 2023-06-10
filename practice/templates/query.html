@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MongoDB Query</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        Result
+      </thead>
+      <tbody>
+        <tr>
+          <td>date</td>
+          <td>$gte</td>
+          <td>{{ query['date']['$gte'] }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>$lte</td>
+          <td>{{ query['date']['$lte'] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

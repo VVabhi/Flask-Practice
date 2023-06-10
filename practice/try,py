@@ -1,0 +1,6 @@
+my_dict = {}
+my_dict['name'] = 'abhishek'
+my_dict['age'] = 25
+my_dict['place'] = 'eluru'
+
+print(my_dict)

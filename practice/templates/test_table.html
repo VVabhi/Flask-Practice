@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- <title>Uploaded File</title> -->
+  </head>
+  <body>
+    <h1>Files</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" id="file_input" name="files[]" multiple="true">
+        <br><br>
+        <button type="submit">Submit</button>  
+    </form>
+
+    <h1>Uploaded Files</h1>
+    <h3>{{filedata}}</h3>
+    <!-- <h4>{{fileName}}</h4> -->
+    <table id="my-table" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th>
+          <th>File</th>
+          <th>status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in filedata %}
+        <tr>
+          <!-- {% for fileName in UPLOAD_FOLDER %} -->
+          <td>row_data</td>
+          <td>{{ row.filename }}</td>
+          <td>{{ row.status }}</td>
+          <!-- {% endfor %} -->
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+	  <!-- <h1>File Uploaded Successfully!</h1> -->
+  </body>
+</html>

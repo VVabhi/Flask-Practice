@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content {
+            border-radius: 10px;
+            margin-left: 390px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            height: 350px;
+            width: 350px; 
+            text-align: center;
+            background-color: transparent;
+            align-items: center;
+        }
+        .submit-btn {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h3>Mobile Data</h3>
+        <form action="/print" method="post" enctype="multipart/form-data">
+            <div>
+                <label>Name</label>
+                <input type="text" id="name" name="name" placeholder="Name"> 
+            </div>
+            <br>
+            <div>
+                <label>Mobile No:</label>
+                <input type="text" id="mobilenum" name="mobilenum" placeholder="Enter Your  number">
+            </div>
+            <br>
+            <div>
+                <label>Date</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <button class="submit-btn">Submit</button>
+        </form>
+        <form action="/datarange" method="post">
+            <h2>Data Search</h2>
+            <label>From Date</label>
+            <input type="date" max="" name="start_date" id="fromdate">
+            <br><br>
+            <label>To Date</label>
+            <input type="date" min="" name="end_date" id="todate">
+            <br><br>
+            <input type="submit" value="Submit">
+            <br>
+        </form>
+    </div>
+</body>
+</html>

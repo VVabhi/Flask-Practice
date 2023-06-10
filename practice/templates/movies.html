@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Title</th>
+        <!-- <th>Release Date</th>
+        <th>Popularity</th> -->
+      </tr>
+      {% for movie in results %}
+      <tr>
+        <td>{{ movie.title }}</td>
+        <!-- <td>{{ movie.release_date }}</td>
+        <td>{{ movie.popularity }}</td> -->
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

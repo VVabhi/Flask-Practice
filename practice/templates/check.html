@@ -1,0 +1,13 @@
+{% extends'Home.html' %}
+{% block content %}
+<body>
+   <h2> Select a Date Range</h2>
+   <form action="/check" name="myform" method="get">
+      {{ form.startdate.label }} {{form.startdate(class='datepicker')} {{form.hidden_tag()}}}
+      {{ form.enddate.label }} {{form.enddate(class='datepicker')} {{form.hidden_tag()}}}
+      <p>
+         {{form.submit()}}
+      </p>
+   </form>
+</body>
+{% endblock % }

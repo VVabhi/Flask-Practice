@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;        
+      }
+      
+      #calculator {
+        width: 300px;
+        margin: 0 auto;
+        background-color: silver;
+        border-radius: 15px;
+        padding: 10px;
+        padding-top: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+      }
+      
+      #result {
+        height: 30px;
+        background-color: white;
+        border: 1px solid gainsboro;
+        text-align: right;
+        padding: 5px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        
+      }
+      
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px;
+        background-color:transparent;
+        border: 1px;
+        border-radius: 60%;
+        margin-bottom: 5px;
+
+      }
+      
+      button:hover {
+        background-color: gray;
+      }
+      
+      #clear {
+        background-color:transparent;
+      }
+      
+      #clear:hover {
+        background-color:gray;
+      }
+      
+      #equals {
+        background-color:transparent;
+      }
+      
+      #equals:hover {
+        background-color: grey;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="result"></div>
+      <button onclick="addToResult('7')"><b>7</b></button>
+      <button onclick="addToResult('8')"><b>8</b></button>
+      <button onclick="addToResult('9')"><b>9</b></button>
+      <button onclick="addToResult('/')"><b>/</b></button>
+      <button onclick="addToResult('4')"><b>4</b></button>
+      <button onclick="addToResult('5')"><b>5</b></button>
+      <button onclick="addToResult('6')"><b>6</b></button>
+      <button onclick="addToResult('*')"><b>x</b></button>
+      <button onclick="addToResult('1')"><b>1</b></button>
+      <button onclick="addToResult('2')"><b>2</b></button>
+      <button onclick="addToResult('3')"><b>3</b></button>
+      <button onclick="addToResult('+')"><b>+</b></button>
+      <button onclick="addToResult('0')"><b>0</b></button>
+      <button onclick="addToResult('.')"><b>.</b></button>
+      <button onclick="addToResult('-')"><b>-</b></button>
+      <button id="equals" onclick="calculate()"><b>=</b></button>
+      <button id="clear" onclick="clearResult()"><b>C</b></button>  
+    </div>
+    <script>
+      let result = document.getElementById('result');
+      
+      function addToResult(value) {
+        result.innerHTML += value;
+      }
+      
+      function clearResult() {
+        result.innerHTML = '';
+      }
+      
+      function calculate() {
+        let expression = result.innerHTML;
+        let answer = eval(expression);
+        result.innerHTML = answer;
+      }
+    </script>
+    
+  </body>
+</html>

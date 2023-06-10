@@ -1,0 +1,35 @@
+
+    .calendar {
+        font-family: Arial, sans-serif;
+        width: 300px;
+        border: 1px solid #ccc;
+    }
+      
+    .month {
+        background-color: #eee;
+        text-align: center;
+        padding: 10px;
+    }
+      
+    .weekdays {
+        display: flex;
+        justify-content: space-around;
+        background-color: #ccc;
+    }
+      
+    .days {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+      
+    .day {
+        width: calc(100% / 7);
+        text-align: center;
+        padding: 10px 0;
+    }
+      
+    .blank {
+        width: calc(100% / 7);
+        padding: 10px 0;
+    }
