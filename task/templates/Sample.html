@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Data</title>
+    <style>
+        table, th, td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #dddddd;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Mobile Name</th>
+                <th>Rating</th>
+                <th>Price</th>
+            </tr> 
+        </thead>
+        <tbody>
+            {% for rows in rows %}
+            <tr>
+                {% for val in rows %}
+                <td>{{ val }}</td>
+                {% endfor %} 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>

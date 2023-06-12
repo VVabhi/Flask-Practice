@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, td, th {
+              border: 1px solid black;
+            }
+            
+            table {
+              border-collapse: collapse;
+              width: 65%;
+            }
+            
+            td {
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Search Results</h2>
+        {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <!-- <th>last_name</th> -->
+                    <th>Class</th>
+                    <th>Place Of Student</th>
+                    <th>Graduated Year</th>
+                    <th> CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.first_name }} {{ result.last_name }}</td>
+                    <td>{{ result.class_name }}</td>
+                    <td>{{ result.place_of_student }}</td>
+                    <td>{{ result.graduated_year }}</td>
+                    <td> {{ result.cgpa }}</td>
+                    <!-- <td>{{ result.dealing_subject }}</td> -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </body>
+</html>

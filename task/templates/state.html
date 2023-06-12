@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Summary Between Two Dates</h1>
+        <form class="input" action="/submit" method="post" enctype="multipart/form-data">
+            <div class="summary2">
+                <label>Mobile No:</label>
+                <input type="text" class="num-input" name="phone1" placeholder="Enter Your  number" value=""/>
+            </div>
+            <br>
+            <div class="submit">
+                <button class="button">submit</button>
+            </div>
+        </form>
+        <br>
+        <form action="/daterange" method="post" enctype="multipart/form-data">
+            <h2>Query</h2>
+            <label>From Date</label>
+            <input type="date" max="" name="start_date" id="fromdate">
+            <br><br>
+            <label>To Date</label>
+            <input type="date" min="" name="end_date" id="todate">
+            <br><br>
+            <input type="submit" value="Submit">
+            <br>
+        </form>
+    </body>
+</html>

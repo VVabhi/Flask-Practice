@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArangoDB Example</title>
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		}
+		th, td {
+		  padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>ArangoDB Example</h1>
+	<table>
+		<thead>
+			<tr>
+				{% for col in cols %}
+				<th>{{ col }}</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in rows %}
+			<tr>
+				{% for col in cols %}
+				<td>{{ row[col] }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

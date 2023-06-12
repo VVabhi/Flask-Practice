@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          font-family: Arial, sans-serif;  
+        }
+        .container1 {
+            width: 300px;
+            float: left;
+            background-color: silver;
+            border-radius: 15px;
+            padding: 30px;
+            /* padding-top: 30px; */
+            /* margin-bottom: 20px; */
+            padding-bottom: 30px;
+            padding-right: 30px;
+            margin-left: 180px;
+        }
+        .container2 {
+            width: 300px;
+            float: right;
+            background-color: lightgrey;
+            border-radius: 15px;
+            padding: 30px;
+            /* padding-top: 30px; */
+            /* margin-bottom: 20px; */
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-right: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container1">
+            <h2>Student Information</h2>
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" id="text" placeholder="first name" name="first_name">
+                </div>
+                <br>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" id="text" placeholder="last name" name="last_name">
+                </div>
+                <br>
+                <div>
+                    <label>Place of Student</label>
+                    <input type="text" id="text" placeholder="place of birth" name="place_of_student">
+                </div>
+                <br>
+                <div>
+                    <label>Class</label>
+                    <!-- <input type="text" id="text" placeholder="class name" name="class_name"> -->
+                </div>
+                <div class="dropdown">
+                    <select id="class_name" name="class_name">
+                      <option value="">All Classes</option>
+                      <option value="Pre Primary">Pre Primary</option>
+                      <option value="Primary">Primary</option>
+                      <option value="Grade 1">Grade 1</option>
+                      <option value="Grade 2">Grade 2</option>
+                      <option value="Grade 3">Grade 3</option>
+                      <option value="Grade 4">Grade 4</option>
+                      <option value="Grade 5">Grade 5</option>
+                      <option value="Grade 6">Grade 6</option>
+                      <option value="Grade 7">Grade 7</option>
+                      <option value="Grade 8">Grade 8</option>
+                      <option value="Grade 9">Grade 9</option>
+                      <option value="Grade 10">Grade 10</option>
+                      <option value="Grade 11">Grade 11</option>
+                      <option value="Grade 12">Grade 12</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label>Graduated Year:</label>
+                    <input type="number" id="year" name="graduated_year" min="1945" max="2100" value="2023" onchange="generateCalendar()">
+                </div>
+                <br>
+                <div>
+                    <label>CGPA:</label>
+                    <input type="text" id="cgpa" name="cgpa" placeholder="CGPA">
+                </div>
+                <br>
+                <input type="submit" id="submit">
+            </form>
+            <br>
+        </div>
+        <div class="container2">
+            <h2>Teacher Information</h2>
+            <form action="/return" method="post" enctype="multipart/form-data">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" id="text" placeholder="first name" name="first_name">
+                </div>
+                <br>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" id="text" placeholder="last name" name="last_name">
+                </div>
+                <br>
+                <div>
+                    <label>Class</label>
+                    <!-- <input type="text" id="text" placeholder="class name" name="class_name"> -->
+                </div>
+                <div class="dropdown">
+                    <select id="class_name" name="class_name">
+                      <option value="">All Classes</option>
+                      <option value="Pre Primary">Pre Primary</option>
+                      <option value="Primary">Primary</option>
+                      <option value="Grade 1">Grade 1</option>
+                      <option value="Grade 2">Grade 2</option>
+                      <option value="Grade 3">Grade 3</option>
+                      <option value="Grade 4">Grade 4</option>
+                      <option value="Grade 5">Grade 5</option>
+                      <option value="Grade 6">Grade 6</option>
+                      <option value="Grade 7">Grade 7</option>
+                      <option value="Grade 8">Grade 8</option>
+                      <option value="Grade 9">Grade 9</option>
+                      <option value="Grade 10">Grade 10</option>
+                      <option value="Grade 11">Grade 11</option>
+                      <option value="Grade 12">Grade 12</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label>Dealing Subject</label>
+                    <!-- <input type="text" id="text" placeholder="dealing subject" name="dealing_subject"> -->
+                </div>
+                <div class="dropdown2">
+                    <select id="dealing_subject" name="dealing_subject">
+                        <option selected disabled>
+                            Dealing Subject
+                        </option>
+                        <option>Telugu</option>
+                        <option>Hindi</option>
+                        <option>English</option>
+                        <option>Mathematics</option>
+                        <option>Science</option>
+                        <option>Social</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                    </select>
+                </div>
+                <br>
+                <input type="submit" value="submit">
+            </form>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

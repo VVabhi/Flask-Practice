@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "644912591e101db0939f9c9f"
+  },
+  "first_name": "Venkata",
+  "last_name": "Abhishek",
+  "place_of_student": "Eluru",
+  "class_name": "Pre Primary",
+  "graduated_year": "2017",
+  "cgpa": "5.6"
+},{
+  "_id": {
+    "$oid": "644912b51e101db0939f9ca1"
+  },
+  "first_name": "Venkata",
+  "last_name": "Abhilash",
+  "place_of_student": "Eluru",
+  "class_name": "Primary",
+  "graduated_year": "2015",
+  "cgpa": "6.8"
+},{
+  "_id": {
+    "$oid": "644912ee1e101db0939f9ca2"
+  },
+  "first_name": "Anil",
+  "last_name": "Kumar",
+  "place_of_student": "Jrg",
+  "class_name": "Grade 1",
+  "graduated_year": "2016",
+  "cgpa": "6.2"
+},{
+  "_id": {
+    "$oid": "64494960f43fae5d44aef5fc"
+  },
+  "first_name": "Putti",
+  "last_name": "Sree Ram",
+  "place_of_student": "Hyderabad",
+  "class_name": "Grade 1",
+  "graduated_year": "2018",
+  "cgpa": "6.9"
+},{
+  "_id": {
+    "$oid": "644a0b0356ed7444f5f11043"
+  },
+  "first_name": "Arun",
+  "last_name": "Showry",
+  "place_of_student": "Eluru",
+  "class_name": "Grade 3",
+  "graduated_year": "2018",
+  "cgpa": "6.9"
+}]

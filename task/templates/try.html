@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArangoDB Example</title>
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		}
+		th, td {
+		  padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>ArangoDB Example</h1>
+	<table>
+		<thead>
+			<tr>
+				<!-- <th>first_name</th>
+				<th>county</th>
+				<th>city</th> -->
+				<th>zip</th>
+				<th>email</th>
+				<th>web</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in fresult %}
+			<tr>
+				<!-- <td>{{ row.first_name }}</td>
+				<td>{{ row.county }}</td>
+				<td>{{ row.city }}</td> -->
+				<td>{{ row.zip }}</td>
+				<td>{{ row.email }}</td>
+				<td>{{ row.web }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

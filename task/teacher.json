@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "64490145c3217d75ad01e973"
+  },
+  "first_name": "Narendra",
+  "last_name": "Modi",
+  "class_name": "Grade 9",
+  "dealing_subject": "Mathematics"
+},{
+  "_id": {
+    "$oid": "64490163c3217d75ad01e974"
+  },
+  "first_name": "Hari",
+  "last_name": "Hara Kumar",
+  "class_name": "Grade 5",
+  "dealing_subject": "Telugu"
+},{
+  "_id": {
+    "$oid": "644901b2c3217d75ad01e976"
+  },
+  "first_name": "Sri",
+  "last_name": "Ramulu",
+  "class_name": "Grade 9",
+  "dealing_subject": "Hindi"
+},{
+  "_id": {
+    "$oid": "644901c4c3217d75ad01e977"
+  },
+  "first_name": "Baskar",
+  "last_name": "Sir",
+  "class_name": "Grade 2",
+  "dealing_subject": "English"
+},{
+  "_id": {
+    "$oid": "644901f5c3217d75ad01e978"
+  },
+  "first_name": "chandra",
+  "last_name": "shekar",
+  "class_name": "Primary",
+  "dealing_subject": "Science"
+},{
+  "_id": {
+    "$oid": "644a0b7456ed7444f5f11044"
+  },
+  "first_name": "Vishnu",
+  "last_name": "Vardhan",
+  "class_name": "Grade 4",
+  "dealing_subject": "Mathematics"
+},{
+  "_id": {
+    "$oid": "644a0b9556ed7444f5f11045"
+  },
+  "first_name": "Vemana",
+  "last_name": "Venkatesh",
+  "class_name": "Grade 8",
+  "dealing_subject": "Mathematics"
+}]

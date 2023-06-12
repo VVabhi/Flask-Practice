@@ -1,0 +1,94 @@
+<!doctype html>  
+<html>
+   <head>
+      <style>
+         table, td, th {
+           border: 1px solid black;
+         }
+         
+         table {
+           border-collapse: collapse;
+           width: 50%;
+         }
+         
+         td {
+           text-align: center;
+         }
+     </style>
+   </head> 
+   <body>
+      <form action="/search2" method="post">
+         <div>
+           <label>Search</label>
+           <input type="text" id="text" name="Search_2">
+         </div>
+         <br>
+         <div class="dropdown">
+           <label for="class_name">Class Name:</label>
+           <select id="class_name" name="class_name">
+             <option value="">All Classes</option>
+             <option value="Pre Primary">Pre Primary</option>
+             <option value="Primary">Primary</option>
+             <option value="Grade 1">Grade 1</option>
+             <option value="Grade 2">Grade 2</option>
+             <option value="Grade 3">Grade 3</option>
+             <option value="Grade 4">Grade 4</option>
+             <option value="Grade 5">Grade 5</option>
+
+             <option value="Grade 6">Grade 6</option>
+             <option value="Grade 7">Grade 7</option>
+             <option value="Grade 8">Grade 8</option>
+             <option value="Grade 9">Grade 9</option>
+             <option value="Grade 10">Grade 10</option>
+             <option value="Grade 11">Grade 11</option>
+             <option value="Grade 12">Grade 12</option>
+           </select>
+         </div>
+         <br>
+         <div>
+           <button type="submit">Search</button>
+           <button type="clear" style="margin-left: 45px;">clear</button>
+         </div>
+     </form>
+     <br>
+      <table> 
+         <thead>
+            <tr>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Class</th>
+               <th>Dealing Subject</th>
+            </tr>
+         </thead>  
+         <tbody>
+            {% for obj in teacher %}
+            <tr>  
+               <td> {{ obj.first_name }} </td>
+               <td> {{ obj.last_name }} </td>
+               <td> {{ obj.class_name }} </td>
+               <td> {{ obj.dealing_subject }} </td>
+            </tr>
+         </tbody>
+         {% endfor %}
+      </table>
+      <table>
+         <!-- <thead>
+             <tr>
+                 <th>name</th>
+                 <th>class_name</th>
+                 <th>dealing_subject</th>
+             </tr>
+         </thead> -->
+         <tbody>
+             {% for result in results %}
+             <tr>
+                 <td>{{ result.first_name }}</td>
+                 <td>{{ result.last_name }}</td>
+                 <td>{{ result.class_name }}</td>
+                 <td>{{ result.dealing_subject }}</td>
+             </tr>
+             {% endfor %}
+         </tbody>
+     </table>
+   </body>  
+</html> 

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, td, th {
+              border: 1px solid black;
+            }
+            
+            table {
+              border-collapse: collapse;
+              width: 65%;
+            }
+            
+            td {
+              text-align: center;
+            }
+            </style>
+    </head>
+    <body>
+        <h2>Search Results</h2>
+        {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <!-- <th>last_name</th> -->
+                    <th>class_name</th>
+                    <th>dealing_subject</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.first_name }} {{ result.last_name }}</td>
+                    <td>{{ result.class_name }}</td>
+                    <td>{{ result.dealing_subject }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </body>
+</html>
